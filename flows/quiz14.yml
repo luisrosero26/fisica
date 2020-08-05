@@ -1,0 +1,92 @@
+completion_text: |-
+  <p style="margin-bottom: 15px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur luctus egestas. Vestibulum varius nisi arcu, ac fringilla ligula bibendum et. Mauris porttitor purus a cursus ultricies. Integer commodo semper dictum. Ut consectetur est in elit scelerisque volutpat. Duis quis dapibus justo, efficitur maximus nisi. Integer luctus eu erat quis pulvinar. Vestibulum lacinia sem sapien, a convallis ligula pellentesque eget. Vestibulum congue elit magna, vitae maximus tortor venenatis vel. Sed id mi et quam mattis feugiat.</p><p style="margin-bottom: 15px; padding: 0px; text-align: justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;">Suspendisse convallis pellentesque erat, sit amet auctor risus molestie congue. Nunc ac fermentum arcu. Mauris feugiat tincidunt tortor nec faucibus. Vivamus vulputate consequat blandit. Sed nec consectetur odio, sed aliquet arcu. Ut sagittis, dolor sed convallis ullamcorper, lorem velit ultricies libero, a luctus sem lorem at ipsum. Donec tempus urna in lacus dapibus volutpat. Integer quis sapien at nibh pretium auctor eget nec turpis. Etiam eget magna a ante facilisis convallis. In ullamcorper odio eget mi blandit ornare.</p>
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur\
+  \ luctus egestas. Vestibulum varius nisi arcu, ac fringilla ligula bibendum et.\
+  \ Mauris porttitor purus a cursus ultricies. Integer commodo semper dictum. Ut consectetur\
+  \ est in elit scelerisque volutpat. Duis quis dapibus justo, efficitur maximus nisi.\
+  \ Integer luctus eu erat quis pulvinar. Vestibulum lacinia sem sapien, a convallis\
+  \ ligula pellentesque eget. Vestibulum congue elit magna, vitae maximus tortor venenatis\
+  \ vel. Sed id mi et quam mattis feugiat.\r\n\r\nSuspendisse convallis pellentesque\
+  \ erat, sit amet auctor risus molestie congue. Nunc ac fermentum arcu. Mauris feugiat\
+  \ tincidunt tortor nec faucibus. Vivamus vulputate consequat blandit. Sed nec consectetur\
+  \ odio, sed aliquet arcu. Ut sagittis, dolor sed convallis ullamcorper, lorem velit\
+  \ ultricies libero, a luctus sem lorem at ipsum. Donec tempus urna in lacus dapibus\
+  \ volutpat. Integer quis sapien at nibh pretium auctor eget nec turpis. Etiam eget\
+  \ magna a ante facilisis convallis. In ullamcorper odio eget mi blandit ornare."
+groups:
+- id: intro
+  pages:
+  - content: "<p style=\"margin-bottom: 15px; padding: 0px; text-align: justify; font-family:\
+      \ &quot;Open Sans&quot;, Arial, sans-serif;\">Lorem ipsum dolor sit amet, consectetur\
+      \ adipiscing elit. Sed efficitur luctus egestas. Vestibulum varius nisi arcu,\
+      \ ac fringilla ligula bibendum et. Mauris porttitor purus a cursus ultricies.\
+      \ Integer commodo semper dictum. Ut consectetur est in elit scelerisque volutpat.\
+      \ Duis quis dapibus justo, efficitur maximus nisi. Integer luctus eu erat quis\
+      \ pulvinar. Vestibulum lacinia sem sapien, a convallis ligula pellentesque eget.\
+      \ Vestibulum congue elit magna, vitae maximus tortor venenatis vel. Sed id mi\
+      \ et quam mattis feugiat.</p><p style=\"margin-bottom: 15px; padding: 0px; text-align:\
+      \ justify; font-family: &quot;Open Sans&quot;, Arial, sans-serif;\">Suspendisse\
+      \ convallis pellentesque erat, sit amet auctor risus molestie congue. Nunc ac\
+      \ fermentum arcu. Mauris feugiat tincidunt tortor nec faucibus. Vivamus vulputate\
+      \ consequat blandit. Sed nec consectetur odio, sed aliquet arcu. Ut sagittis,\
+      \ dolor sed convallis ullamcorper, lorem velit ultricies libero, a luctus sem\
+      \ lorem at ipsum. Donec tempus urna in lacus dapibus volutpat. Integer quis\
+      \ sapien at nibh pretium auctor eget nec turpis. Etiam eget magna a ante facilisis\
+      \ convallis. In ullamcorper odio eget mi blandit ornare.</p> "
+    id: welcome
+    title: Quiz semana 1
+    type: Page
+- id: quiz_start
+  pages:
+  - answers:
+    - <plain>9
+    id: quizquestion17
+    prompt: ''
+    title: 4+5
+    type: TextQuestion
+    value: 10.0
+  - choices:
+    - '7'
+    - '5'
+    - '6'
+    id: quizquestion18
+    prompt: ''
+    title: 3+3
+    type: ChoiceQuestion
+    value: 10.0
+  - choices:
+    - ~CORRECT~ cinco
+    - ~CORRECT~ 5
+    - '6'
+    credit_mode: exact
+    id: quizquestion19
+    prompt: ''
+    shuffle: false
+    title: 4+1
+    type: MultipleChoiceQuestion
+    value: 10.0
+  shuffle: false
+rules:
+  access:
+  - permissions:
+    - view
+    - submit_answer
+    - end_session
+    - see_correctness
+    - see_answer_after_submission
+  grade_aggregation_strategy: use_latest
+  grade_identifier: quiz14
+  grading:
+  - credit_percent: 100
+  start:
+  - if_before: 2020-09-25 15:23:32+00:00
+    if_has_fewer_sessions_than: 1
+    if_has_role:
+    - student
+    - ta
+    - instructor
+    may_list_existing_sessions: true
+    may_start_new_session: true
+  - may_list_existing_sessions: true
+    may_start_new_session: false
+title: Quiz semana 1
