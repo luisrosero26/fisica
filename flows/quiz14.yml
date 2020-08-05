@@ -48,7 +48,7 @@ groups:
   - choices:
     - '7'
     - '5'
-    - '6'
+    - ~CORRECT~ 6
     id: quizquestion18
     prompt: ''
     title: 3+3
